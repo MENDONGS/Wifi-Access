@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>⚡ WiFi Access ⚡</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background">
+    <div class="card">
+      <h1 class="title glitch" data-text="ACCESS GRANTED">ACCESS GRANTED</h1>
+      <p class="subtext">Use this code to connect to the WiFi network:</p>
+      <div class="password-box" id="wifiPassword">ESTRADA@2025</div>
+      <button onclick="copyPassword()" class="copy-btn">📋 Copy Password</button>
+      <p class="footer">Black & White Access Panel • No Logs • No Traces</p>
+    </div>
+  </div>
+
+  <script>
+    function copyPassword() {
+      const password = document.getElementById("wifiPassword").innerText;
+      navigator.clipboard.writeText(password).then(() => {
+        alert("WiFi password copied!");
+      });
+    }
+  </script>
+</body>
+</html>
